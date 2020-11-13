@@ -222,8 +222,8 @@ public class WGraph_Algo  implements weighted_graph_algorithms{
         return _graph.toString();
     }
 
-    /* a custom comparator for the queue utilized in the main class
-     * as to sort the nodes by their tag size
+    /* a custom comparator for the queue, utilized in the main class
+     * as to sort the nodes by their tag size.
      */
     private class NodeComparator implements Comparator<node_info>{
 
