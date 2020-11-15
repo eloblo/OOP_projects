@@ -1,4 +1,4 @@
-/*
+
 package ex1;
 
 import org.junit.jupiter.api.Assertions;
@@ -59,4 +59,3 @@ public class node_test {
         Assertions.assertTrue(nis.isEmpty());
     }
 }
-*/
