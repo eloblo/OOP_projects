@@ -19,6 +19,7 @@ public class graph_algo_test {
         for(int i = 0; i < 10; i++){   //create edges in the graph
             g.connect(i, i+1, 2*i +1);
         }
+        ga.init(g);
     }
 
     @Test
