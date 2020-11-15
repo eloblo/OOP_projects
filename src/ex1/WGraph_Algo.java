@@ -8,9 +8,7 @@ import java.util.*;
 public class WGraph_Algo  implements weighted_graph_algorithms{
 
     WGraph_DS _graph;      //the main graph the algorithms are working on
-
-    /** create an object of WGraph_Algo. */
-    public WGraph_Algo(){}
+    NodeComparator _comp = new NodeComparator(); //a custom comparator for to compare between node in the algorithms
 
     /** create an object of WGraph_Algo with the inputted graph. */
     public WGraph_Algo(weighted_graph g){
@@ -100,8 +98,7 @@ public class WGraph_Algo  implements weighted_graph_algorithms{
         nDest = _graph.getNode(dest);
         if(node != null && nDest != null){                                                   //check that the nodes exist in the graph
             node.setInfo("");                                                                //empty the src node info, mainly to record the path of nodes
-            NodeComparator comp = new NodeComparator();                                      //creates a custom comparator for the queue
-            PriorityQueue<node_info> que = new PriorityQueue<node_info>(_graph.nodeSize(), comp);    //priority queue for the algorithm
+            PriorityQueue<node_info> que = new PriorityQueue<node_info>(_graph.nodeSize(), _comp);    //priority queue for the algorithm with class' comp
             que.add(node);
             while(!que.isEmpty()){                                                           //check every node until queue is empty
                 node = que.remove();                                                         //remove the node that is being checked

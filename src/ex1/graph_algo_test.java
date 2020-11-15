@@ -9,7 +9,7 @@ import java.util.List;
 public class graph_algo_test {
 
     WGraph_DS g = new WGraph_DS();       //the graph that ga will work on
-    WGraph_Algo ga = new WGraph_Algo();  //the object of the algorithms
+    WGraph_Algo ga = new WGraph_Algo(g);  //the object of the algorithms
 
     @BeforeEach
     void setUp(){
@@ -19,7 +19,6 @@ public class graph_algo_test {
         for(int i = 0; i < 10; i++){   //create edges in the graph
             g.connect(i, i+1, 2*i +1);
         }
-        ga.init(g);
     }
 
     @Test
