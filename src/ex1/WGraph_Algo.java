@@ -10,6 +10,9 @@ public class WGraph_Algo  implements weighted_graph_algorithms{
     WGraph_DS _graph;      //the main graph the algorithms are working on
     NodeComparator _comp = new NodeComparator(); //a custom comparator for to compare between node in the algorithms
 
+    /** create an empty object of WGraph_Algo */
+    public WGraph_Algo(){}
+
     /** create an object of WGraph_Algo with the inputted graph. */
     public WGraph_Algo(weighted_graph g){
         _graph = (WGraph_DS) g;
